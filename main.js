@@ -22,49 +22,58 @@ function populatePage (inventory) {
 
 	    containerDiv.innerHTML += newCard;
 	  }
-}	  
+}	 
+
+
+
+function clickOnCard() {
+  if (event.target.classList.contains("cardDiv")) {
+    $("#card-container div").removeClass("clicked");
+    event.target.classList.add("clicked");
+  }
+} 
   
   // Now that the DOM is loaded, establish all the event listeners needed
-  CarLot.activateEvents();
-}
+  // CarLot.activateEvents();
+
 
 // Load the inventory and send a callback function to be
 // invoked after the process is complete
-CarLot.loadInventory();
+// CarLot.loadInventory();
 
 
-var getPlanets = document.getElementById('showPlanets');
-var planetHolderDiv = document.getElementById('planetHolder');
+// var getPlanets = document.getElementById('showPlanets');
+// var planetHolderDiv = document.getElementById('planetHolder');
 
-function writeToDom() {
-	planetHolderDiv.innerHTML = ""; //wipes clean the DOM each time btn is hit
-	for (var i = 0; i < planets.length; i++) {
-		var newPlanet=""; //empty string
+// function writeToDom() {
+// 	planetHolderDiv.innerHTML = ""; //wipes clean the DOM each time btn is hit
+// 	for (var i = 0; i < planets.length; i++) {
+// 		var newPlanet=""; //empty string
 
-		newPlanet += `<div class="planetBox" id="planetBox-${i}">` //use i since it's a counter and the id will increase numerical value (view in inspect elements)
-			//$ tells the browser that the code is js inside the html
+// 		newPlanet += `<div class="planetBox" id="planetBox-${i}">` //use i since it's a counter and the id will increase numerical value (view in inspect elements)
+// 			//$ tells the browser that the code is js inside the html
 
-		newPlanet += `<div class="planetName hidden"> ${planets[i].name} </div>`; //string templating	
-		newPlanet += `<img class="planetImage" src="${planets[i].url}">`
-		newPlanet += `</div>`
-	planetHolderDiv.innerHTML += newPlanet;
-	}
-}	
+// 		newPlanet += `<div class="planetName hidden"> ${planets[i].name} </div>`; //string templating	
+// 		newPlanet += `<img class="planetImage" src="${planets[i].url}">`
+// 		newPlanet += `</div>`
+// 	planetHolderDiv.innerHTML += newPlanet;
+// 	}
+// }	
 
-function showMeTheMoney(event){
-	if(event.target.className === 'planetImage'){
-	console.log("event worked", event);
-	// console.log("event worked", event.target.parentNode.id); //unique identifier affected by js (line 49)
-	console.log("text?", event.target.previousSibling);
-	event.target.previousSibling.classList.remove('hidden');
-	}	
-}
+// function showMeTheMoney(event){
+// 	if(event.target.className === 'planetImage'){
+// 	console.log("event worked", event);
+// 	// console.log("event worked", event.target.parentNode.id); //unique identifier affected by js (line 49)
+// 	console.log("text?", event.target.previousSibling);
+// 	event.target.previousSibling.classList.remove('hidden');
+// 	}	
+// }
 
-getPlanets.addEventListener("mouseenter", writeToDom);
+// getPlanets.addEventListener("mouseenter", writeToDom);
 
-// console.log("planetBoxes", planetBoxes)
+// // console.log("planetBoxes", planetBoxes)
 
-document.body.addEventListener("click", showMeTheMoney);
+// document.body.addEventListener("click", showMeTheMoney);
 
 
 
