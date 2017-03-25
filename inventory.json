@@ -1,0 +1,26 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Honda",
+      "model": "Fit",
+      "year": "2006",
+      "price": "8999",
+      "description": "It looks ugly but runs well."
+    },
+     {
+      "make": "Jeep",
+      "model": "Liberty",
+      "year": "2003",
+      "price": "2999",
+      "description": "Jeep looking for a good home. Will take out often to play in mud."
+    }
+
+  ]
+}
