@@ -1,1 +1,1 @@
-# spa-milestone-challenge
+# SPA Milestone Challenge

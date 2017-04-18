@@ -1,0 +1,11 @@
+body {
+	background-color: lightgray;
+}
+.cardDiv {
+	border: 2px solid black;
+}
+
+.clicked {
+	border: 5px solid black;
+	background-color: white;
+}
